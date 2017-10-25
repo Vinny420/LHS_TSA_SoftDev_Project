@@ -2,3 +2,6 @@
 This is for the Software Development Club, part of TSA at Lakeside High School
 # DO NOT COMMIT DIRECTLY TO MASTER BRANCH
 This is bad practice. Instead, fork the project and start a pull request.
+
+# Direct APK Downloads
+Link is now online: https://drive.google.com/drive/folders/0B5c_so7kecKieU8xNXN1MHNRVTg?usp=sharing 
