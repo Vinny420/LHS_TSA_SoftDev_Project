@@ -14,6 +14,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:visibility="visible"
+            app:title="Your Feed"
+            app:titleTextColor="@android:color/white" />
+
         <RelativeLayout
             android:id="@+id/two"
             android:layout_width="match_parent"
@@ -70,4 +82,3 @@
         app:headerLayout="@layout/header_layout"
         app:menu="@menu/nav" />
 </android.support.v4.widget.DrawerLayout>
-
