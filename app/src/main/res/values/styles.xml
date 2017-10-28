@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="MaterialLight" parent="android:Theme.Holo">
+    <style name="MaterialLight" parent="@style/Theme.AppCompat">
 
     </style>
 

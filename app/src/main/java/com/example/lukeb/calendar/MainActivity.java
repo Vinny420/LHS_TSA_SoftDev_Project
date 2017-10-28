@@ -2,6 +2,7 @@ package com.example.lukeb.calendar;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentActivity;
@@ -30,38 +31,41 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar3);
-        setSupportActionBar(toolbar);
-        actionBar = getSupportActionBar();
-        lay1 = (RelativeLayout) findViewById(R.id.one);
-        lay2 = (RelativeLayout) findViewById(R.id.two);
-        lay3 = (RelativeLayout) findViewById(R.id.three);
-
-
-        drawerLayout = (DrawerLayout) findViewById(R.id.dLayout);
-        if(actionBar != null){
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close){
-                public void onDrawerClosed(View view)
-                {
-                    supportInvalidateOptionsMenu();
-                    //drawerOpened = false;
-                }
-
-                public void onDrawerOpened(View drawerView)
-                {
-                    supportInvalidateOptionsMenu();
-                    //drawerOpened = true;
-                }
-            };
-            mDrawerToggle.setDrawerIndicatorEnabled(true);
-            drawerLayout.setDrawerListener(mDrawerToggle);
-            mDrawerToggle.syncState();
-            setListener();
-
-        }
+        navigate();
     }
 
+    public void navigate(){
+        if(Build.VERSION.SDK_INT >= 21) {
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
+            setSupportActionBar(toolbar);
+            actionBar = getSupportActionBar();
+            lay1 = (RelativeLayout) findViewById(R.id.one);
+            lay2 = (RelativeLayout) findViewById(R.id.two);
+            lay3 = (RelativeLayout) findViewById(R.id.three);
+
+
+            drawerLayout = (DrawerLayout) findViewById(R.id.dLayout);
+            if (actionBar != null) {
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
+                    public void onDrawerClosed(View view) {
+                        supportInvalidateOptionsMenu();
+                        //drawerOpened = false;
+                    }
+
+                    public void onDrawerOpened(View drawerView) {
+                        supportInvalidateOptionsMenu();
+                        //drawerOpened = true;
+                    }
+                };
+                mDrawerToggle.setDrawerIndicatorEnabled(true);
+                drawerLayout.setDrawerListener(mDrawerToggle);
+                mDrawerToggle.syncState();
+                setListener();
+
+            }
+        }
+    }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()){
