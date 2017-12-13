@@ -19,6 +19,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+/*
+ * Luke Blevins - Modified 12/12/2017
+ */
+
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     RelativeLayout lay1;
