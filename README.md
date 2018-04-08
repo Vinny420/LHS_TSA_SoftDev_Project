@@ -10,4 +10,4 @@
 
 <h2>Direct APK Downloads</h2>
 <p>Download compatible with your Android Jelly Bean device or above:</p> 
-<a href="https://drive.google.com/drive/folders/0B5c_so7kecKieU8xNXN1MHNRVTg?usp=sharing">Click here to download</a> 
+<h4>DOWNLOAD CLOSED</h4> 
